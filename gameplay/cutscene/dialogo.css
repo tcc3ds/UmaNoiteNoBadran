@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+  background-image: url("img/scene1.png");
+  background-repeat: no-repeat, repeat;
+  background-size: 100%;
+  max-width: 0.75;
+}
+
+.box{
+  font-family: "VT323";
+  position: absolute;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 10px;
+  left: 50%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 30px 0 0 30px;
+  border: solid rgb(255, 255, 255);
+
+}
+
+.icon {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  left: 100%;
+}
+
+@keyframes grow {
+  0% { max-height: var(--lineHeight); }
+  100% { max-height: calc(var(--lineHeight) * var(--lines)); }
+}
+
+@keyframes carriageReturn {
+  0% { top: 0; }
+  100% { top: calc(var(--lineHeight) * var(--lines)); }
+}
+
+@keyframes type {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+
+@keyframes caret {
+  0% { color: var(--bgColor); }
+  100% { color: black; }
+}
+
+.typewriter {
+  --bgColor: rgb(12, 12, 12);
+  border-radius: 30px 0 0 30px;
+  --lines: 500;
+  --lineHeight: 1.5rem;
+  --timePerLine: 4s;
+  --widthCh: 50;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);  
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  /* word-break: break-all; */
+}
+
+.typewriter::before {
+  content: "";
+  animation: 
+    type var(--timePerLine) linear infinite, 
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.typewriter.no-caret::before {
+  border-left-width: 0;
+}
+
+.typewriter.big-caret::before {
+  border-left-width: 1ch;
+}
+
+.typewriter.monospace {
+  font-family: "VT323";
+}
+
+.typewriter.monospace::before {
+  animation: 
+    type var(--timePerLine) steps(var(--widthCh)) infinite, 
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+}
+
+/* DEMO */
+section {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 5rem;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+}
+
+section:nth-child(2) { top: 10rem; }
+section:nth-child(3) { top: 20rem; }
+
+.lorem {
+  --widthCh: 60;
+  --timePerLine: 6s;
+}
+
+#One, #Two, #Three, #Four, #Five, #Six {
+  display: none;
+}
+
+.btn{
+  position: absolute;
+    bottom: 0;
+    text-align: center!important;
+    width: 99%;
+    padding-bottom: 2rem;
+}
+#btn1 {
+  text-align: center!important;
+  display: none;
+  font-family: 'VT323';
+  font-size: 3.2rem;
+  color: white;
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    height: 100%;
+    background-color: #5f345b;
+    background-image: linear-gradient(#180949, #5f345b, #a02149);
+}
+
+
+/* NAVBAR */
+
+#index {
+    padding: 0!important;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+.donut {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.help {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(226, 226, 226);
+}
+
+.help .descr {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(226, 226, 226);
+}

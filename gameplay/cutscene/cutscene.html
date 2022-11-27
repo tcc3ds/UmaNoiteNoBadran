@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+
+    <link rel="stylesheet" href="cutscene.css">
+    <link rel="stylesheet" href="dialogo.css">
+</head>
+
+<body>
+    <div>
+        <div class="btn">
+            <a href="combate.html" id="btn1">Entrar</a>
+        </div>
+
+        <img class="zoom" id="bg" src="./img/scene1.png" alt="">
+
+        <div>
+            <section id="Zero" onclick="nextZero()">
+                <div class="box">
+                    <div class="typewriter">
+                        Carol: Eu to com medo!
+                    </div>
+                    <img class="icon" src="img/icones/CarolRosto.png">
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <section id="One" onclick="nextOne()">
+                <div class="box">
+                    <div class="typewriter">
+                       Malu: Para, Caroline! Vai dar certo!
+                    </div>
+                    <img class="icon" src="img/icones/RostoMalu.png">
+                </div>
+            </section>
+        </div>
+        
+        <div>
+            <section id="Two" onclick="nextTwo()">
+                <div class="box">
+                    <div class="typewriter">
+                       Lyvia: Vai dar certo o que, gente?
+                    </div>
+                    <img class="icon" src="img/icones/LyRosto.png">
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <section id="Three" onclick="nextThree()">
+                <div class="box">
+                    <div class="typewriter">
+                       Kamilla: Olha lá, a Ana Laura já tá até entrando.
+                    </div>
+                    <img class="icon" src="img/icones/RostoKamz.png">
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <section id="Four" onclick="nextFour()">
+                <div class="box">
+                    <div class="typewriter">
+                       Anny: Gente, pelo amor de Deus, vamos logo com isso. 
+                    </div>
+                    <img class="icon" src="img/icones/RostoAnny.png">
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <section id="Five" onclick="endScene()">
+                <div class="box">
+                    <div class="typewriter">
+                       Malu: OK, é o seguinte: a gente tem que pegar o maior número de rosquinhas possível na cozinha. Vamos entrar e nos separar pra procurar a chave. Cada uma de vocês tem uma escuta, qualquer coisa é só ligar e avisar se houver algum problema. 
+                    </div>
+                    <img class="icon" src="img/icones/RostoMalu.png">
+                </div>
+            </section>
+        </div>
+    
+    
+        <div class="audio">
+            <div class="player">
+
+            <!-- Play Button -->
+                <a id="podcast-play" onclick="playShow()"><img id="semSom" src="./semSom.png"></img></a>
+          
+            <!-- Pause Button -->
+                <a id="podcast-pause" onclick="pauseShow()" style="display:none;"><img id="som" src="som.png"></img></a>
+          </div>
+          
+          
+          <!-- Audio player -->
+          <audio loop id="podcast-audio">
+              <source src="suspense.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+
+        
+    </div>
+
+    
+
+    <script src="./audio.js"></script>
+    <script src="./dialogo.js"></script>
+</body>
+
+</html>

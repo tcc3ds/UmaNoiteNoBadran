@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    background-image: url("img/scene1.png");
+    background-repeat: no-repeat, repeat;
+    background-size: 2000px 1000px;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    text-align: center!important;
+    width: 99%;
+    padding-bottom: 2rem;
+}
+
+.title h1 {
+    font-family: 'VT323';
+    font-size: 4.5rem;
+    color: white;
+}
+
+.title a {
+    font-family: 'VT323';
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.donut {
+    width: 4rem;
+    height: 4rem;
+    padding: 0 .5rem 0 .5rem;
+}

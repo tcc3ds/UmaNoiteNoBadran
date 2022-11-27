@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(44, 44, 44);
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.iconsOne,
+.iconsTwo {
+    display: flex;
+    justify-content: center;
+}
+
+.crLyvia,
+.crKamz,
+.crCarol,
+.crAnny,
+.crMalu {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
